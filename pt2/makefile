@@ -5,7 +5,6 @@ JC = javac
 
 CLASSES = \
 Finder.java\
-Monitor.java\
 Main.java
 
 default: classes
