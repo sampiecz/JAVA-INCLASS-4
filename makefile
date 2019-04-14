@@ -4,7 +4,8 @@ JC = javac
 .java.class: ; $(JC) $(JFLAGS) $*.java
 
 CLASSES = \
-FindItThread.java\
+Finder.java\
+Monitor.java\
 Main.java
 
 default: classes
