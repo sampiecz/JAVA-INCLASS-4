@@ -29,13 +29,12 @@ public class Finder implements Runnable
 				if(i == searchNum)
 				{
 					System.out.println("The number is " + i);
-					System.out.println("Target number " + i + "found by " + this + ".");
+					System.out.println("Target number " + i + " found by " + this + ".");
                     this.myMonitor.foundNumber();
 				}
 
 				if(someCounter == 10)
 				{
-					System.out.println("Sleeping.");
 					Thread.sleep(1);
 					someCounter = 0;
 				}

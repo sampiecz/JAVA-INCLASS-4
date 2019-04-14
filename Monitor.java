@@ -1,29 +1,30 @@
 import java.lang.Thread;
 import java.util.ArrayList;
 
-public class Monitor extends Thread
+public class Monitor extends Thread 
 {
-	private ArrayList<Finder> threads = new ArrayList<Finder>();
+	private ArrayList<Thread> myThreads = new ArrayList<Thread>();
 	private boolean found = false;
 
-	public void addThread(Finder theThread)
+	public void addThread(Thread theThread)
 	{
-		this.threads.add(theThread);
+		myThreads.add(theThread);
 	}
 
 	public synchronized void foundNumber()
 	{
-        for(Finder item : this.threads)
+        for(Thread item : myThreads)
         {
             // stop the thread
-            item.interrupt();
-			this.found = true;
+            System.out.println(item + " interrupted");
+            item.currentThread().interrupt();
+			found = true;
         }
 	}
 
 	public void run()
 	{
-		while(!this.found)
+		while(!found)
 		{
 		}
 	}
