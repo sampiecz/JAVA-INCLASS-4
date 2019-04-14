@@ -5,19 +5,31 @@ public class Monitor extends Thread
 {
 	private ArrayList<Thread> threads = new ArrayList<Thread>();
 
-	addThread(Thread theThread)
+	public void addThread(Thread theThread)
 	{
 		this.threads.add(theThread);
 	}
 
-	foundNumber()
+	public void foundNumber()
 	{
+        for(item in this.threads)
+        {
+            // stop the thread
+            item.stop();
+
+			item.isInterrupted();
+            // should also set a bolean instance variable to true 
+            // to indicate that the number has been found
+            //
+            // WHAT BOOLEAN INSTANCE VALUE
+        }
 	}
 
-	run()
+	public void run()
 	{
-		while()
+		while(!this.threads.isEmpty())
 		{
+            this.thread
 		}
 	}
 }

@@ -11,13 +11,16 @@ public class Main
 		
 		Finder threadZero = new Finder(target, 0, 249);
 		threadZero.run();
-
 		Finder threadOne = new Finder(target, 250, 499);
 		threadOne.run(); 
-
 		Finder threadTwo = new Finder(target, 500, 749);
 		threadTwo.run(); 
 
+        Monitor myMonitor = new Monitor();
+        myMonitor.addThread(threadZero);
+        myMonitor.addThread(threadOne);
+        myMonitor.addThread(threadTwo);
+        myMonitor.run();
     }
 
 }

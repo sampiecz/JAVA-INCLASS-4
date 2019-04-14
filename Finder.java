@@ -27,6 +27,10 @@ public class Finder implements Runnable
 				if(i == searchNum)
 				{
 					System.out.println("Found num, it is: " + i);
+                    // Notify Monitor thread
+                    // This should interrupt all finder threads
+                    // WHen the thread is interrupted it
+                    // Should display a line saying it has ended. 
 				}
 
 				if(someCounter == 10)
